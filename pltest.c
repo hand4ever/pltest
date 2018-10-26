@@ -182,10 +182,11 @@ PHP_FUNCTION(pltest_add) {
         return ;
     }
     int c;
-    c = a + b;
-    RETURN_LONG(c);
+
     php_printf(a);
     php_printf(b);
+    c = a + b;
+    RETURN_LONG(c);
 }
 /**
  * test string
