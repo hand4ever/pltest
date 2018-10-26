@@ -1,17 +1,27 @@
 <?php
 greeting();
-echo pltest_add(111, 222),PHP_EOL;
-echo greeting_word('greeting ,', 'zhangsan'), PHP_EOL;
+
+$re = pltest_add(1, 2);
+d($re);
+
+d(greeting_word('greeting ,', 'zhangsan'));
 
 $str = 'pltest_md5salt';
 $salt = 'hello';
-echo "------------\nPHP: md5($str.$salt)", PHP_EOL;
-echo md5($str.$salt), PHP_EOL;
-echo "extention:\n";
+d("------------\nPHP: md5($str.$salt)");
+d(md5($str.$salt));
+d("extention:");
 pltest_md5salt($salt);
 
-echo "\n------------\n\n";
+d(PHP_EOL);
 
+/*
+ * display string
+ */
+function d($str){
+    echo $str;
+    echo PHP_EOL;
+}
 //copy from onesdk {{{
 function toEnSign($data, $key,$osdkId=0,$app="sign",$category="log")
 {
