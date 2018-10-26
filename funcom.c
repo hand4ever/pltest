@@ -2,6 +2,7 @@
  * 测试 word
  */
 char* getWord() {
+    return "hellloooooooooooo";
     char *str = "~~~~~~Greeting world!!!\n";
     return str;
 }
