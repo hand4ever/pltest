@@ -1,7 +1,7 @@
 <?php
 greeting();
 
-d(PHP_EOL);
+d();
 
 $re = pltest_add(1, 2);
 d($re);
@@ -15,12 +15,12 @@ d(md5($str.$salt));
 d("extention:");
 pltest_md5salt($salt);
 
-d(PHP_EOL);
+d();
 
 /*
  * display string
  */
-function d($str){
+function d($str=""){
     echo $str;
     echo PHP_EOL;
 }

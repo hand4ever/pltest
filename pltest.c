@@ -182,7 +182,7 @@ PHP_FUNCTION(pltest_add) {
         return ;
     }
     int c;
-    c = 333;
+    c = a + b;
     RETURN_LONG(c);
 }
 /**
