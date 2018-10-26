@@ -1,6 +1,8 @@
 <?php
 greeting();
 
+d(PHP_EOL);
+
 $re = pltest_add(1, 2);
 d($re);
 
