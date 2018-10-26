@@ -184,6 +184,8 @@ PHP_FUNCTION(pltest_add) {
     int c;
     c = a + b;
     RETURN_LONG(c);
+    php_printf(a);
+    php_printf(b);
 }
 /**
  * test string
