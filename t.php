@@ -10,7 +10,7 @@ echo md5($str.$salt), PHP_EOL;
 echo "extention:\n";
 pltest_md5salt($salt);
 
-echo "------------\n", PHP_EOL;
+echo "\n------------\n\n";
 
 //copy from onesdk {{{
 function toEnSign($data, $key,$osdkId=0,$app="sign",$category="log")

@@ -227,8 +227,8 @@ PHP_FUNCTION(pltest_md5salt) {
     /**
      * copy from standard/md5.c
      */
-    char md5str[33];// = pltest_md5(arg);
-    
+    char md5str[33] = pltest_md5(arg);
+    /*
     PHP_MD5_CTX context;
     unsigned char digest[16];
     md5str[0] = '\0';
@@ -238,7 +238,7 @@ PHP_FUNCTION(pltest_md5salt) {
     PHP_MD5Final(digest, &context);
 
     make_digest_ex(md5str, digest, 16);
-    
+    */
 
     php_printf(md5str);
     zend_string_release(arg);    
