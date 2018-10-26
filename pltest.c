@@ -29,6 +29,8 @@
 
 #include "standard/md5.h"
 
+#include "funcom.c"
+
 /* If you declare any globals in php_pltest.h uncomment this:
 ZEND_DECLARE_MODULE_GLOBALS(pltest)
 */
@@ -158,9 +160,6 @@ char* pltest_md5(zend_string *arg) {
 
     return md5str;
 }
-char* test1() {
-    return "Hello ";
-}
 /* }}} */
 
 /* {{{ pltest_functions[]
@@ -177,10 +176,6 @@ const zend_function_entry pltest_functions[] = {
 	PHP_FE_END	/* Must be the last line in pltest_functions[] */
 };
 
-char* getWord() {
-    char *str = "~~~~~~Greeting world!!!\n";
-    return str;
-}
 /**
  * test 1
  */
