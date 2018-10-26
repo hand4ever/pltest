@@ -183,8 +183,8 @@ PHP_FUNCTION(pltest_add) {
     }
     int c;
 
-    php_printf(a);
-    php_printf(b);
+    printf("a = %d, ", a)
+    printf("b = %d", b)
     c = a + b;
     RETURN_LONG(c);
 }
