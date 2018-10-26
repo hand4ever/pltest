@@ -176,13 +176,19 @@ const zend_function_entry pltest_functions[] = {
     PHP_FE(pltest_todesign, NULL)
 	PHP_FE_END	/* Must be the last line in pltest_functions[] */
 };
+
+char* getWord() {
+    char *str = "~~~~~~Greeting world!!!\n";
+    return str;
+}
 /**
  * test 1
  */
 PHP_FUNCTION(greeting) {
-    char *str = "~Greeting world!!!\n";
+    //char *str = "~Greeting world!!!\n";
     //char *str2 = test1();
     //strcat(str, str2); 
+    char *str = getWord();
 
     php_printf(str);
 }
