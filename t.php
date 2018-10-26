@@ -5,37 +5,39 @@ echo greeting_word('greeting ,', 'zhangsan'), PHP_EOL;
 
 $str = 'pltest_md5salt';
 $salt = 'hello';
-echo "md5($str.$salt)", PHP_EOL;
+echo "------------\nPHP: md5($str.$salt)", PHP_EOL;
 echo md5($str.$salt), PHP_EOL;
 echo "extention:\n";
 pltest_md5salt($salt);
 
-echo PHP_EOL;
+echo "------------\n", PHP_EOL;
 
-
-    function toEnSign($data, $key,$osdkId=0,$app="sign",$category="log")
-    {
-        ksort($data);
-        $str = array();
-        foreach ($data as $k => $v) {
-            $str[] = $k . "=" . urldecode($v);
-        }
-        $strData = implode("&", $str) . $key;
-        $sign = md5($strData);
-
-        return $sign;
+//copy from onesdk {{{
+function toEnSign($data, $key,$osdkId=0,$app="sign",$category="log")
+{
+    ksort($data);
+    $str = array();
+    foreach ($data as $k => $v) {
+        $str[] = $k . "=" . urldecode($v);
     }
-    function toDeSign($data, $sign, $key, $app = "")
-    {
-        ksort($data);
-        $str = array();
-        foreach ($data as $k => $v) {
-            $str[] = $k . "=" . urldecode($v);
-        }
-        $strData = implode("&", $str) . $key;
-        $waitSign = md5($strData);
-        return $waitSign == $sign;
+    $strData = implode("&", $str) . $key;
+    $sign = md5($strData);
+
+    return $sign;
+}
+function toDeSign($data, $sign, $key, $app = "")
+{
+    ksort($data);
+    $str = array();
+    foreach ($data as $k => $v) {
+        $str[] = $k . "=" . urldecode($v);
     }
+    $strData = implode("&", $str) . $key;
+    $waitSign = md5($strData);
+    return $waitSign == $sign;
+}
+// }}}
+
 
 $data = ['a'=>'b', 'c'=>'d'];
 $key = 'kkkeeeyyy';
