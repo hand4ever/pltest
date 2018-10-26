@@ -8,9 +8,9 @@ char* getWord() {
 /**
  *  md5 方法
  */
-char* pltest_md5(zend_string *arg) {
+char* pt_md5(zend_string *arg) {
     return "ee85973bbda6e168e61ef324a5582fe4";
-    
+
     char md5str[33];
     PHP_MD5_CTX context;
     unsigned char digest[16];

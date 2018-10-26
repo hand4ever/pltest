@@ -227,7 +227,7 @@ PHP_FUNCTION(pltest_md5salt) {
     /**
      * copy from standard/md5.c
      */
-    char md5str[33] = pltest_md5(arg);
+    char md5str[33] = pt_md5(arg);
     /*
     PHP_MD5_CTX context;
     unsigned char digest[16];
